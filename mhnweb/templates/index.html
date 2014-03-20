@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load blog_tags keyword_tags i18n future %}
+
+{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+{% block main %}
+
+{% block feed_panel %}
+<div class="middle">
+	<div id="banner-slide">
+
+        <!-- start Basic Jquery Slider -->
+        <ul class="bjqs">
+         <li>
+            <a href="case-studies/dap"><img src="{{ MEDIA_URL }}uploads/main_banners/banner_01.jpg" alt="MHN DAP" /></a>
+         </li>
+         <li>
+            <a href="case-studies/flexpansion"><img src="{{ MEDIA_URL }}uploads/main_banners/banner_02.jpg" alt="Flexpansion" /></a>
+         </li>
+         <li>
+            <a href="case-studies/levima"><img src="{{ MEDIA_URL }}uploads/main_banners/banner_03.jpg" alt="iTravelTrack" /></a>
+         </li>
+         <li>
+            <a href="case-studies/charting"><img src="{{ MEDIA_URL }}uploads/main_banners/banner_04.jpg" alt="Charting" /></a>
+         </li>
+         <li>
+            <a href="case-studies/informatic-ventures"><img src="{{ MEDIA_URL }}uploads/main_banners/banner_05.jpg" alt="Informatics Ventures" /></a>
+         </li>
+         <li>
+            <a href="case-studies/companymot"><img src="{{ MEDIA_URL }}uploads/main_banners/banner_06.jpg" alt="CompanyMOT" /></a>
+         </li>
+         {% comment %} Removed
+         <li>
+            <a href="case-studies/medvu"><img src="{{ MEDIA_URL }}uploads/main_banners/banner_07.jpg" alt="MedVU" /></a>
+         </li>
+         {% endcomment %}
+         <li>
+            <a href="case-studies/island-gis"><img src="{{ MEDIA_URL }}uploads/main_banners/banner_08.jpg" alt="IslandGIS" /></a>
+         </li>
+         <li>
+            <a href="case-studies/x-system"><img src="{{ MEDIA_URL }}uploads/main_banners/banner_09.jpg" alt="X-System" /></a>
+         </li>
+        </ul>
+        <!-- end Basic jQuery Slider -->
+
+      </div>
+      <!-- End outer wrapper -->
+      
+      <!-- attach the plug-in to the slider parent element and adjust the settings as required -->
+      <script class="secret-source">
+        jQuery(document).ready(function($) {
+          
+          $('#banner-slide').bjqs({
+            animtype      : 'slide',
+            height        : 250,
+            width         : 940,
+            responsive    : true,
+            randomstart   : true
+          });
+          
+        });
+      </script>
+
+	<div class="main_menu">
+    <a href="services"><img class="img_main" src="{{ MEDIA_URL }}uploads/services_link.jpg" alt="Services" id="cases_block" /></a>
+    <a href="case-studies"><img class="img_main" src="{{ MEDIA_URL }}uploads/case_studies_link.jpg" alt="Case Studies" id="cases_block" /></a>
+    <a href="about"><img class="img_main" src="{{ MEDIA_URL }}uploads/about_us_link.jpg" alt="About Us" id="cases_block" /></a>
+    <a href="contact"><img class="img_main" src="{{ MEDIA_URL }}uploads/contact_link.jpg" alt="Contact Us" id="cases_block" /></a>
+	</div><!-- end main_menu -->
+
+
+{% block blog_recent_posts %}
+{% blog_recent_posts 2 as recent_posts %}
+{% if recent_posts %}
+<h2>{% trans "News" %}</h2>
+<ul class="unstyled recent-posts bloggy">
+{% for recent_post in recent_posts %}
+<li><a href="{{ recent_post.get_absolute_url }}"
+    >{{ recent_post.title }}</a> <h6>{{ recent_post.publish_date|timesince }} {% trans "ago" %}<h6><hr></li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
+
+</div>
+{% endblock %}
+
+
+{% endblock %}
