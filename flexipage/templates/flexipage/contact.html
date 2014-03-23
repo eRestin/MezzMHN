@@ -6,7 +6,7 @@
 {% endblock %}
 {% block main %}{{ block.super }}
 
-<div class="content">
+<div class="pull-down">
 
 <div class="col-md-8 pull-right">
 <form method="POST">
@@ -24,7 +24,7 @@
             <td colspan=2><ul class="feedback-error">{% for error in flexiform_FeedbackForm.errors.content %} <li>{{error}}</li> {% endfor %}</ul>{{ flexiform_FeedbackForm.content }}</td>
         </tr>
     </table>
-        <input class="button move-right" type="submit"></input>
+        <input class="btn btn-success pull-right btn_style" type="submit"></input>
 </form>
 </div>
   <div class="pull-left">

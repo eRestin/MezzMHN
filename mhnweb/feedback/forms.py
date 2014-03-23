@@ -11,4 +11,4 @@ class FeedbackForm(FlexiModelForm, Html5Mixin):
     email = forms.CharField(widget=forms.TextInput(attrs = {'placeholder': 'E-Mail', 'class': 'emailclass'}), label='')
     telephone = forms.CharField(widget=forms.TextInput(attrs = {'placeholder': 'Telephone', 'class': 'telephoneclass'}), label='')
     address = forms.CharField(widget=forms.TextInput(attrs = {'placeholder': 'Address', 'class': 'addressclass'}), label='')
-    content = forms.CharField(widget=forms.Textarea(attrs = {'placeholder': 'Enquiry', 'rows': 4, 'cols': 40, 'class': 'contentsclass'}), label='')
+    content = forms.CharField(widget=forms.Textarea(attrs = {'placeholder': 'Message', 'rows': 4, 'cols': 40, 'class': 'contentsclass'}), label='')
