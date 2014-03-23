@@ -1,0 +1,39 @@
+{% extends "pages/page.html" %}
+{% load mezzanine_tags %}
+
+{% block map %}
+<iframe width="940" height="300" src="http://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=11+Crichton+St,+Edinburgh,+City+of+Edinburgh+EH8+9AB&amp;aq=&amp;sll=55.944475,-3.186443&amp;sspn=0.003001,0.008256&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=11+Crichton+St,+Edinburgh,+City+of+Edinburgh+EH8+9,+United+Kingdom&amp;t=m&amp;ll=55.949632,-3.18964&amp;spn=0.023068,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+{% endblock %}
+{% block main %}{{ block.super }}
+
+<div class="content">
+
+<div class="col-md-8 pull-right">
+<form method="POST">
+        {% csrf_token %}
+    <table>
+        <tr>
+            <td><ul class="feedback-error">{% for error in flexiform_FeedbackForm.errors.name %} <li>{{error}}</li> {% endfor %}</ul>{{ flexiform_FeedbackForm.name }}</td>
+            <td><ul class="feedback-error">{% for error in flexiform_FeedbackForm.errors.email %} <li>{{error}}</li> {% endfor %}</ul>{{ flexiform_FeedbackForm.email }}</td>
+        </tr>
+        <tr>
+            <td><ul class="feedback-error">{% for error in flexiform_FeedbackForm.errors.telephone %} <li>{{error}}</li> {% endfor %}</ul>{{ flexiform_FeedbackForm.telephone }}</td>
+            <td><ul class="feedback-error">{% for error in flexiform_FeedbackForm.errors.address %} <li>{{error}}</li> {% endfor %}</ul>{{ flexiform_FeedbackForm.address }}</td>
+        </tr>
+        <tr>
+            <td colspan=2><ul class="feedback-error">{% for error in flexiform_FeedbackForm.errors.content %} <li>{{error}}</li> {% endfor %}</ul>{{ flexiform_FeedbackForm.content }}</td>
+        </tr>
+    </table>
+        <input class="button move-right" type="submit"></input>
+</form>
+</div>
+  <div class="pull-left">
+    <h3>Office</h3>
+      <p>{% editable flexi_Contact.content %}
+      {{flexi_Contact.content|richtext_filter|safe}}
+      {% endeditable %}</p>
+  </div>
+  
+</div>
+{% endblock %}
+
