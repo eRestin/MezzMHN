@@ -25,7 +25,7 @@ p {
   position: relative;
   top: 70px;
   height: 30px;
-  left: 85px;
+  left: 55px;
 }
 a {
   color: #000000!important;
@@ -132,7 +132,7 @@ a:focus {
   -moz-border-radius-bottomright: 10px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  margin:0px 0px 0px 4px;
+  margin:0px 0px 0px 10px;
 }
 .img_a {
   border: none;
@@ -151,4 +151,46 @@ a:focus {
   -moz-border-radius-bottomleft: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+.blog_richtext {
+  display: none;
+}
+iframe {
+  border: 0px;
+}
+.formelement, textarea, input[type="text"], input[type="tel"], input[type="email"] { 
+  background-color: #ebebeb;
+  font-size: 0.875em;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 20px;
+  line-height: 1;
+}
+.namesclass {
+  width: 94.4%!important;
+  display: inline;
+  margin: 0px 0px 20px 0px!important;
+}
+.emailclass {
+  width: 94.4%!important;
+  display: inline;
+  margin: 0px 0px 20px 0px!important;
+}
+.telephoneclass {
+  width: 94.4%!important;
+  display: inline;
+  margin: 0px 0px 20px 0px!important;
+}
+.addressclass {
+  width: 94.4%!important;
+  display: inline;
+  margin: 0px 0px 20px 0px!important;
+}
+.contentsclass {
+  width: 97.50%;
+  margin: 0px 0px 20px 0px!important;
+}
+table {
+  width: 100%;
 }
