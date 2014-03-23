@@ -4,6 +4,16 @@ body {
 p {
   text-align: justify;
 }
+.prefooter h5 {
+  font-size: 13px!important;
+  color: white!important;
+  margin: 20px 0 10px 0;
+  line-height: 140%;
+}
+.under_footer h6 {
+  font-weight:normal;
+  font-size: 13px;
+}
 .mainborder {
   margin-left: auto;
   margin-right: auto;
@@ -191,8 +201,19 @@ iframe {
   width: 97.50%;
   margin: 0px 0px 20px 0px!important;
 }
+.btn_style {
+  margin-right: 15px;
+}
 table {
   width: 100%;
+}
+.pull-down {
+  margin-top: 20px;
+}
+.feedback-error {
+  list-style-type: none;
+  margin: 0px 0px 0px -20px;
+  color: red;
 }
 .under_footer {
   max-width: 980px;
