@@ -1,25 +1,45 @@
 {% load i18n future pages_tags %}
 
+<div class="prefooter">
+    <div class="row">
+        <div class="foot_margin">
+            <div class="col-md-4 prefoot_text">
+                <h5>Our main focus, is an emphasis on providing complete solutions to both technical and business problems.<br>
+                <a href="{% url "about-us" %}"><img src="{{ MEDIA_URL }}uploads/learn_more.png" alt="Learn more" /></a>
+                </h5>
+            </div>
+            <div class="foots">
+                <a target="_blank" href="https://www.facebook.com/pages/Mobile-Healthcare-Networks/234761683242826"><img src="{{ MEDIA_URL }}uploads/share_btn/facebook.png" class="img_a prefoot_img" alt="Facebook" /></a>
+                <a href="{% url "blog" %}"><img src="{{ MEDIA_URL }}uploads/share_btn/rss.png" class="img_a prefoot_img" alt="RSS" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="foots">
+Company Registered in Scotland: no.SC304505 | 6 ATHOLL CRESCENT PERTH PH1 5JN
+<h6>Copyright © {% now "Y" %}, MHN Ltd. All rights reserved</h6>
+</div>
 {% spaceless %}
+<div class="col-md-3">
 {% if page_branch_in_menu %}
 
 {% for page in page_branch %}
     {% if page.is_primary %}
         {% if forloop.first %}
-            <div class="nav-footer">
+            <ul class="no_foot_margin clearfix">
         {% endif %}
         {% if page.in_menu %}
-            <ul class="list-unstyled">
+            <li><ul class="no_foot_margin">
         {% endif %}
     {% endif %}
 
     {% if page.in_menu %}
         {% if forloop.first and not page.parent.in_menu and not page.is_primary %}
-            <ul class="list-unstyled">
+            <li><ul class="no_foot_margin">
         {% endif %}
-        <li {% if page.is_current_or_ascendant %}class="active"{% endif %}
+        <li {% if page.is_current_or_ascendant %}class="foot_active"{% endif %}
             id="footer-menu-{{ page.html_id }}">
-            <a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
+            <a href="{{ page.get_absolute_url }}"><h6>{{ page.title }}</h6></a></li>
     {% endif %}
 
     {% if page.in_menu and page.has_children_in_menu %}{% page_menu page %}{% endif %}
@@ -32,14 +52,15 @@
 
     {% if page.is_primary %}
         {% if page.in_menu %}
-            </ul>
+            </ul></li>
         {% endif %}
         {% if forloop.last %}
-            </div>
+            </ul>
         {% endif %}
     {% endif %}
 
 {% endfor %}
 
 {% endif %}
+</div>
 {% endspaceless %}
