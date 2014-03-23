@@ -1,5 +1,5 @@
 {% load i18n future pages_tags %}
-
+<div class="under_footer">
 <div class="prefooter">
     <div class="row">
         <div class="foot_margin">
@@ -20,7 +20,7 @@ Company Registered in Scotland: no.SC304505 | 6 ATHOLL CRESCENT PERTH PH1 5JN
 <h6>Copyright © {% now "Y" %}, MHN Ltd. All rights reserved</h6>
 </div>
 {% spaceless %}
-<div class="col-md-3">
+<div class="col-md-4">
 {% if page_branch_in_menu %}
 
 {% for page in page_branch %}
@@ -64,3 +64,4 @@ Company Registered in Scotland: no.SC304505 | 6 ATHOLL CRESCENT PERTH PH1 5JN
 {% endif %}
 </div>
 {% endspaceless %}
+</div>
