@@ -32,6 +32,7 @@ urlpatterns += patterns('',
     # one out.
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
+    url("^about-us$", "mezzanine.pages.views.page", {"slug": "/"}, name="about-us"),
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
@@ -57,6 +58,7 @@ urlpatterns += patterns('',
     # page tree in the admin if it was installed.
 
     # url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
+    url("^blog$", "mezzanine.blog.views.blog_post_list", name="blog"),
 
     # MEZZANINE'S URLS
     # ----------------
