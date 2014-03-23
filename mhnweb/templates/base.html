@@ -77,32 +77,30 @@
     <div class="col-md-7 menu_smth">
         <div class="navbar">{% page_menu "pages/menus/dropdown.html" %}</div>
     </div>
-
+{% block map %}{% endblock %}
 
     <div class="row">
         <div class="col-md-12">
         {% block feed_panel %}
-        <div class="col-md-12">
-        <img src="{{ MEDIA_URL }}uploads/blog_banner.jpg" class="bloggy" alt="MHN Blog" />
-            <div class="span7 middle">
-                {% block main %}{% endblock %}
-            </div>
-            <div class="col-md-3 pull-right">
-                {% nevercache %}
-                {% include "includes/user_panel.html" %}
-                {% endnevercache %}
-            <div class="panel">
-                {% block right_panel %}
+                <img src="{{ MEDIA_URL }}uploads/blog_banner.jpg" class="bloggy" alt="MHN Blog" />
+                <div class="span7 middle">
+                    {% block main %}{% endblock %}
+                </div>
+                <div class="col-md-3 pull-right">
+                    {% nevercache %}
+                    {% include "includes/user_panel.html" %}
+                    {% endnevercache %}
+                <div class="panel">
+                    {% block right_panel %}
                 
-                {% ifinstalled mezzanine.twitter %}
-                {% include "twitter/tweets.html" %}
-                {% endifinstalled %}
+                    {% ifinstalled mezzanine.twitter %}
+                    {% include "twitter/tweets.html" %}
+                    {% endifinstalled %}
                 
-                {% endblock %}
+                    {% endblock %}
+                </div>
+                </div>
             </div>
-            </div>
-            </div>
-        </div>
         {% endblock %}
     </div>
 </div>
