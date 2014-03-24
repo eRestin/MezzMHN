@@ -68,13 +68,13 @@
     {% endfor %}
     {% endnevercache %}
 
-    <div class="main_logo col-md-5">
+    <div class="main_logo col-md-4">
         <a href="{% url "home" %}">
         <img src="{{ MEDIA_URL }}uploads/mhn_logo.png">
         </a>
     </div>
 
-    <div class="col-md-7 menu_smth">
+    <div class="col-md-8 menu_smth">
         <div class="navbar">{% page_menu "pages/menus/dropdown.html" %}</div>
     </div>
 {% block map %}{% endblock %}

@@ -40,8 +40,8 @@ ul, ol {
 .menu_smth {
   position: relative;
   top: 70px;
-  height: 30px;
-  left: 30px;
+  left: 60px;
+  font-size: 16px;
 }
 a {
   color: #000000!important;
