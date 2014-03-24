@@ -4,15 +4,21 @@ body {
 p {
   text-align: justify;
 }
-.prefooter h5 {
-  font-size: 13px!important;
-  color: white!important;
-  margin: 20px 0 10px 0;
-  line-height: 140%;
+h2, h2 a {
+  color: #737914!important;
+  font-weight: normal!important;
 }
-.under_footer h6 {
-  font-weight:normal;
-  font-size: 13px;
+h3, h3 a {
+  color: #737914!important;
+  font-weight: normal!important;
+}
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+ul, ol {
+  padding-left: 0px;
 }
 .mainborder {
   margin-left: auto;
@@ -200,6 +206,7 @@ iframe {
 .contentsclass {
   width: 97.50%;
   margin: 0px 0px 20px 0px!important;
+  resize: vertical;
 }
 .btn_style {
   margin-right: 15px;
@@ -241,6 +248,7 @@ footer {
 footer li {
   float:left;
   list-style-type:none;
+  margin-right: 10px;
 }
 .prefoot_text {
   margin-top:-20px;
@@ -253,4 +261,40 @@ footer li {
   text-align: right;
   float: right!important;
   margin-right: 30px!important;
+}
+.prefooter h5 {
+  font-size: 13px!important;
+  color: white!important;
+  margin: 20px 0 10px 0;
+  line-height: 140%;
+}
+.under_footer h6 {
+  font-weight:normal;
+  font-size: 13px;
+}
+.recent-post-img {
+  background-image: url(../img/favicon.png);
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+.posted {
+  font-weight: 200!important;
+  font-size: 12px!important;
+}
+.bloggy {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+#share-buttons img {
+  width: 43px !important;
+  padding: 4px;
+  border:  0;
+  box-shadow: none !important;
+  display: inline;
+  vertical-align: middle;
+}
+#share-buttons, #share-buttons a {
+  font-size:  20px;
+  color: #737914!important;
+  font-weight: bold;
 }
