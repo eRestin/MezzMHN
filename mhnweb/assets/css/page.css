@@ -231,6 +231,9 @@ table {
   margin: 0px 0px 0px -20px;
   color: red;
 }
+.news_block {
+  margin-left: 5px;
+}
 .footborder {
   margin-left: auto;
   margin-right: auto;
@@ -266,7 +269,7 @@ footer li {
 }
 .prefoot_text {
   margin-top:-20px;
-  margin-left:-15px!important;
+  margin-left:-16px!important;
 }
 .no_foot_margin {
   margin: 0px!important;
@@ -274,7 +277,7 @@ footer li {
 .icon_foots {
   text-align: right;
   float: right!important;
-  margin-right: 30px!important;
+  margin-right: 15px!important;
 }
 .foots {
   text-align: right;
