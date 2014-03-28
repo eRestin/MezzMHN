@@ -58,59 +58,60 @@
 <body id="{% block body_id %}body{% endblock %}">
 
 {% block indexpage %}
-
 <div class="container">
-<div class="mainborder">
+    <div class="mainborder">
 
-    {% nevercache %}
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }}" data-alert="alert">
-        <a class="close" href="#" onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }}
-    </div>
-    {% endfor %}
-    {% endnevercache %}
+        {% nevercache %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" data-alert="alert">
+            <a class="close" href="#" onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }}
+        </div>
+        {% endfor %}
+        {% endnevercache %}
 
-    <div class="main_logo col-sm-4">
-        <a href="{% url "home" %}">
-        <img src="{{ MEDIA_URL }}uploads/mhn_logo.png">
-        </a>
-    </div>
+        <div class="main_logo col-sm-4">
+            <a href="{% url "home" %}">
+            <img src="{{ MEDIA_URL }}uploads/mhn_logo.png">
+            </a>
+        </div>
 
-    <div class="col-md-8 menu_smth">
-        <div class="navbar">{% page_menu "pages/menus/dropdown.html" %}</div>
-    </div>
-{% block map %}{% endblock %}
+        <div class="col-md-8 menu_smth">
+            <div class="navbar">{% page_menu "pages/menus/dropdown.html" %}</div>
+        </div>
+        {% block map %}{% endblock %}
 
-    <div class="row">
-        <div class="col-md-12">
-        {% block feed_panel %}
-                <img src="{{ MEDIA_URL }}uploads/blog_banner.jpg" class="bloggy" alt="MHN Blog" />
-                <div class="col-md-7">
-                    {% block main %}{% endblock %}
+        <div class="row">
+            <div class="col-md-12">
+            {% block feed_panel %}
+                    <img src="{{ MEDIA_URL }}uploads/blog_banner.jpg" class="bloggy" alt="MHN Blog" />
+                    <div class="col-md-7">
+                        {% block main %}{% endblock %}
+                    </div>
+                    <div class="col-md-3 pull-right">
+                        {% nevercache %}
+                        {% include "includes/user_panel.html" %}
+                        {% endnevercache %}
+                    <div class="panel">
+                        {% block right_panel %}
+                    
+                        {% ifinstalled mezzanine.twitter %}
+                        {% include "twitter/tweets.html" %}
+                        {% endifinstalled %}
+                    
+                        {% endblock %}
+                    </div>
+                    </div>
                 </div>
-                <div class="col-md-3 pull-right">
-                    {% nevercache %}
-                    {% include "includes/user_panel.html" %}
-                    {% endnevercache %}
-                <div class="panel">
-                    {% block right_panel %}
-                
-                    {% ifinstalled mezzanine.twitter %}
-                    {% include "twitter/tweets.html" %}
-                    {% endifinstalled %}
-                
-                    {% endblock %}
-                </div>
-                </div>
-            </div>
-        {% endblock %}
-    </div>
-</div>
-</div><!-- end mainborder -->
+            {% endblock %}
+        </div>
+    </div><!-- end mainborder -->
+</div><!-- end container -->
 
 <footer>
-    <div class="col-md-12">
-        {% page_menu "pages/menus/footer.html" %}
+    <div class="container">
+        <div class="col-md-12">
+            {% page_menu "pages/menus/footer.html" %}
+        </div>
     </div>
 </footer>
 
