@@ -107,15 +107,11 @@
     </div><!-- end mainborder -->
 </div><!-- end container -->
 
-<footer>
-    <div class="content_footer">
-        <div class="col-md-12">
-            <div class="row">
-            {% page_menu "pages/menus/footer.html" %}
-            </div>
-        </div>
-    </div>
-</footer>
+<div class="container">
+    <footer>
+        {% page_menu "pages/menus/footer.html" %}
+    </footer>
+</div>
 
 {% include "includes/footer_scripts.html" %}
 {% endblock %}

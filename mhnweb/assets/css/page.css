@@ -238,6 +238,8 @@ table {
 .content_footer {
   padding-left: 0px!important;
   padding-right: 0px!important;
+  margin-right: auto;
+  margin-left: auto;
 }
 .footborder {
   margin-left: auto;
