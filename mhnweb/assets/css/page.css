@@ -271,10 +271,14 @@ footer li {
 .no_foot_margin {
   margin: 0px!important;
 }
-.foots {
+.icon_foots {
   text-align: right;
   float: right!important;
   margin-right: 30px!important;
+}
+.foots {
+  text-align: right;
+  float: right!important;
 }
 .prefooter h5 {
   font-size: 13px!important;
