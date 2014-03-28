@@ -280,12 +280,17 @@ footer li {
 .foots {
   text-align: right;
   float: right!important;
+  margin-right: 20px;
 }
 .prefooter h5 {
   font-size: 13px!important;
   color: white!important;
   margin: 20px 0 10px 0;
   line-height: 140%;
+}
+.down_footer {
+  width: 980px;
+  margin: 0px auto 10px;
 }
 .under_footer h6 {
   font-weight:normal;
