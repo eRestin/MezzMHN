@@ -80,9 +80,9 @@
         </div>
         {% block map %}{% endblock %}
 
-        <div class="row">
-            <div class="col-sm-12">
             {% block feed_panel %}
+            <div class="row">
+            <div class="col-sm-12">
                 <img src="{{ MEDIA_URL }}uploads/blog_banner.jpg" class="bloggy" alt="MHN Blog" />
                 <div class="col-sm-9">
                     {% block main %}{% endblock %}
@@ -102,10 +102,10 @@
                         
                             {% endblock %}
                         </div>
-                </div>    
-            {% endblock %}
+                </div>
             </div>
-        </div>
+            </div>    
+            {% endblock %}
     </div><!-- end mainborder -->
 </div><!-- end container -->
 
