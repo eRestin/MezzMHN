@@ -81,8 +81,8 @@
         {% block map %}{% endblock %}
 
         
-            {% block feed_panel %}
-            <div class="row">
+    {% block feed_panel %}
+        <div class="row">
             <div class="col-sm-12">
                 <img src="{{ MEDIA_URL }}uploads/blog_banner.jpg" class="bloggy" alt="MHN Blog" />
                 <div class="col-sm-9">
@@ -102,11 +102,11 @@
                             {% endifinstalled %}
                         
                             {% endblock %}
-                        </div>
-                </div>
-            </div>
-        </div>
-            {% endblock %}
+                        </div><!-- panel -->
+                </div><!-- end col-sm-3 -->
+            </div><!-- end col-sm-12 -->
+        </div><!-- end row -->
+    {% endblock %}
 
     </div><!-- end mainborder -->
 </div><!-- end container -->
