@@ -1,5 +1,5 @@
 /* Basic jQuery Slider essential styles */
-#banner-slide { margin-top: 10px;}
+#banner-slide { margin-top: 120px;}
 ul.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none;}
 li.bjqs-slide{position:absolute; display:none;}
 ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
