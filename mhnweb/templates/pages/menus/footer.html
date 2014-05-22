@@ -1,6 +1,13 @@
 {% load i18n future pages_tags %}
+{% load mezzanine_tags %}
+{% load block_tags %}
+
 <div class="prefooter">
     <div class="row">
+        {% block flatblock %}
+            {% richflatblock "My Awesome HTML Block" %}
+        {% endblock flatblock %}
+        <!--
             <div class="col-sm-5 prefoot_text">
                 <h5>Our main focus, is an emphasis on providing complete solutions to both technical and business problems.<br>
                 <a href="{% url "about-us" %}"><img src="{{ MEDIA_URL }}uploads/learn_more.png" alt="Learn more" /></a>
@@ -10,7 +17,7 @@
                 <a target="_blank" href="https://www.facebook.com/pages/Mobile-Healthcare-Networks/234761683242826"><img src="{{ MEDIA_URL }}uploads/share_btn/facebook.png" class="img_a prefoot_img" alt="Facebook" /></a>
                 <a href="{% url "blog" %}"><img src="{{ MEDIA_URL }}uploads/share_btn/rss.png" class="img_a prefoot_img" alt="RSS" /></a>
             </div>
-
+        -->
     </div>
 </div>
 <div class="down_footer">
