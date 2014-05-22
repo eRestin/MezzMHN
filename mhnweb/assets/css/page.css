@@ -4,13 +4,26 @@ body {
 p {
   text-align: justify;
 }
+h1 {
+  font-size: 24px!important;
+  color: #5d6618!important;
+  text-transform: uppercase;
+}
 h2, h2 a {
   color: #737914!important;
+  font-size: 24px!important;
   font-weight: normal!important;
 }
 h3, h3 a {
   color: #737914!important;
+  font-size: 18px!important;
+  color: #F08421!important;
   font-weight: normal!important;
+}
+h4 {
+  color: #345cc2!important;
+  font-size: 18px!important;
+  font-style: italic!important;
 }
 ul.unstyled,
 ol.unstyled {
