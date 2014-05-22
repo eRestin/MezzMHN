@@ -3,4 +3,5 @@
 dev.db
 .DS_Store
 .coverage
+*.thumbnails
 local_settings.py
