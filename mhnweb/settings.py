@@ -253,13 +253,15 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     #"mezzanine.accounts",
     #"mezzanine.mobile",
+    "mezzanine_blocks",
     "flexipage", # Add the flexipage app
 
     #Our apps:
     "feedback"
 )
 FLEXI_TEMPLATES = (
-     ('contact.html','contact'),
+    ('index.html','home'),
+    ('contact.html','contact'),
 )
 
 FLEXI_FORMS = (
