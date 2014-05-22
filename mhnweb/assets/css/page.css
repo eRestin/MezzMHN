@@ -341,3 +341,8 @@ footer li {
   color: #737914!important;
   font-weight: bold;
 }
+/* Editable form position fix */
+.editable-form {
+  position: absolute!important;
+  top:0px;
+}
