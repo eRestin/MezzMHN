@@ -25,6 +25,9 @@ h4 {
   font-size: 18px!important;
   font-style: italic!important;
 }
+ul {
+  list-style-image: url(../img/bullet.png)!important;
+}
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
@@ -340,4 +343,9 @@ footer li {
   font-size:  20px;
   color: #737914!important;
   font-weight: bold;
+}
+/* Editable form position fix */
+.editable-form {
+  position: absolute!important;
+  top:0px;
 }
