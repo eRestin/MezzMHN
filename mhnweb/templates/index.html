@@ -7,12 +7,12 @@
 
 {% block feed_panel %}
 <div id="banner-slide">
-
 	{% editable flexi_Banners.content %}
        	{{flexi_Banners.content|richtext_filter|safe}}
     {% endeditable %}
+</div>
 
-<script class="secret-source">
+    <script class="secret-source">
         jQuery(document).ready(function($) {
           
           $('#banner-slide').bjqs({
@@ -24,9 +24,7 @@
           });
           
         });
-        </script>
-
-</div>
+    </script>
 
 <div class="main_menu">
 	{% editable flexi_menu.content %}
